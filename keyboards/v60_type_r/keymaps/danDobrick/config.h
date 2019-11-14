@@ -1,4 +1,4 @@
-/* Copyright 2017 benlyall, MechMerlin
+/* Copyright 2019 DanDobrick
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -17,6 +17,11 @@
 
 // place overrides here
 
+// Tap dance timing
+#define TAPPING_TERM 175
+// Leader key timing
+#define LEADER_PER_KEY_TIMING
+#define LEADER_TIMEOUT 350
 
 #ifdef V60_POLESTAR
 #undef V60_POLESTAR
