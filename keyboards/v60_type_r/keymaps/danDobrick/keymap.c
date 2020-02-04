@@ -117,22 +117,6 @@ void matrix_scan_user(void) {
     leading = false;
     leader_end();
 
-    // ¯\_(ツ)_/¯
-    // See README for required setup
-    SEQ_TWO_KEYS(KC_S, KC_H) {
-      tap_code16(MEH(KC_SPC));
-
-      unicode_input_start(); register_hex(0xaf); unicode_input_finish();
-      tap_code(KC_BSLS);
-      register_code (KC_RSFT); tap_code(KC_MINS); tap_code(KC_9); unregister_code (KC_RSFT);
-      unicode_input_start (); register_hex(0x30c4); unicode_input_finish();
-      register_code (KC_RSFT); tap_code(KC_0); tap_code(KC_MINS); unregister_code (KC_RSFT);
-      tap_code(KC_SLSH);
-      unicode_input_start (); register_hex(0xaf); unicode_input_finish();
-
-      tap_code16(MEH(KC_SPC));
-    }
-
     // Switch to CTRL layer
     SEQ_THREE_KEYS(KC_C, KC_M, KC_D) {
       layer_invert(_CTRL);
@@ -174,3 +158,28 @@ void led_set_user(uint8_t usb_led) {
       PORTE &= ~(1<<PE6);
   }
 }
+
+// // Turn lights on/of when computer powers on/off
+// extern rgblight_config_t rgblight_config;
+// extern backlight_config_t backlight_config;
+// void suspend_power_down_user(void)
+// {
+//   // rgb
+//   rgblight_config.enable = false;
+//   rgblight_set();
+
+//   // backlight
+//   /** I don't know why, but 3 means "off" and down is up */
+//   backlight_config.level = 3;
+//   backlight_config.enable = false;
+//   backlight_set(3);
+// }
+
+// void suspend_wakeup_init_user(void)
+// {
+//   rgblight_config.raw = eeconfig_read_rgblight();
+//   backlight_config.raw = eeconfig_read_backlight();
+
+//   backlight_set(backlight_config.level);
+//   rgblight_set();
+// }

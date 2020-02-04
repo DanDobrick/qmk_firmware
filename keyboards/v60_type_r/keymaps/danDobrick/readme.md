@@ -18,14 +18,8 @@ Underglow color corresponds to layer:
 
 ## Leader keys
 ---------------------
-The unicode `¯\_(ツ)_/¯` only works on OSX AND if you do the following:
-
-1) Add `Unicode Hex Input` source under `Prefrences -> keyboard -> input sources`
-2) Under `Prefrences -> keyboard -> shortcuts -> input Sources` change the "select previous input source" shortcut to `MEH + Space`.
 
 `LEADER` -> CMD = Switch to CTRL layer
-
-`LEADER` -> sh = `¯\_(ツ)_/¯`
 
 # Keymaps
 
